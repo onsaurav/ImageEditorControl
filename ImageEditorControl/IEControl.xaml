@@ -1,0 +1,354 @@
+﻿<UserControl x:Class="IEControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="430" d:DesignWidth="741">
+
+    <UserControl.Resources>
+        <DataTemplate x:Key="SolidColorTemplate" DataType="{x:Type SolidColorBrush}">
+            <DockPanel Margin="1">
+                <Border Background="{Binding}" Tag="{Binding}" Width="{Binding ElementName=cboBorderColor, Path=ActualWidth}" Height="15" DockPanel.Dock="Left"/>
+                <!--<TextBlock Text="{Binding}" Margin="5,0,0,0"/>-->
+            </DockPanel>
+        </DataTemplate>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="404*" />
+            <RowDefinition Height="26*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="225*" MaxWidth="275" />
+            <ColumnDefinition Width="515*" />
+        </Grid.ColumnDefinitions>
+        
+        <ListBox Grid.Column="1" Name="lstImages" />
+        
+        <Button Content="Save Selected" Grid.Column="1" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="0,3,0,0" Name="btnSaveSelected" VerticalAlignment="Top" Width="100" FontWeight="Bold" />
+        <Button Content="Delete Selected" Grid.Column="1" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="103,3,0,0" Name="btnDeleteSelected" VerticalAlignment="Top" Width="100" FontWeight="Bold" />
+        <Button Content="Save All Images" Grid.Column="1" Grid.Row="1" Height="23" Margin="0,3,2,0" Name="btnSaveAllImages" VerticalAlignment="Top"  HorizontalAlignment="Right" Width="100" FontWeight="Bold" />
+
+        <StackPanel Name="stkLeftPanel" Grid.Column="0" Grid.RowSpan="2" Margin="0,0,2,0" >
+            <ScrollViewer Height="{Binding ElementName=stkLeftPanel, Path=ActualHeight}"  >
+                <StackPanel  >
+                    <Border Name="brdLoadImage" CornerRadius="5,5,5,5" Margin="4,0,3,0" BorderBrush="Gray" BorderThickness="1"  >
+                        <Expander Name="extLoadImage" Width="Auto" IsExpanded="True"  Header="Load Images" Margin="1,0,1,0"  >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="30" />
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Grid.Row="0" Margin="5,5,5,2" FontWeight="Bold" Text="Load Image from Hard Drive"></TextBlock>
+                                <Button Grid.Column="1" Name="btnLoadImage" Content="..." Height="21" Margin="0,2" Width="30"></Button>
+
+                                <!--<StackPanel Grid.Row="1" Grid.ColumnSpan="2" Margin="0,3,0,0">
+                                <DockPanel Background="Gray" Width="Auto" Height="2"></DockPanel>
+                                <TextBlock FontWeight="Bold" Text="Search Web For Images" Foreground="#BB2222" FontSize="12" TextAlignment="Center" Margin="0,5,0,0"></TextBlock>
+                                <DockPanel Margin="10,5,10,0">
+                                    <Label FontWeight="Bold" Content="Query"></Label>
+                                    <TextBox FontWeight="Bold" Foreground="Red" FontSize="12" Margin="3,0,0,0"></TextBox>
+                                </DockPanel>
+                                
+                                <Button Name="btnSearchInWeb" Content="Search" Height="23" HorizontalAlignment="Right" Margin="0,3,10,0" Width="65"></Button>
+
+
+                                    <GroupBox Name="grpSelection" Header="Morphology" Margin="0,3,0,3"  >
+                                        <StackPanel  >
+                                            <CheckBox Name="chkSelectAll" Content="Select All" Margin="0,5,0,0"/>
+                                            <CheckBox Name="chkGoogleImages" Content="Google Images" Margin="0,2,0,0"/>
+                                            <CheckBox Name="chkBingImages" Content="Bing Images" Margin="0,2,0,0"/>
+                                            <CheckBox Name="chkFlickrCreativeCommons" Content="Flickr Creative Commons" Margin="0,2,0,0"/>
+                                            <CheckBox Name="chkMorgueFile" Content="Morgue File" Margin="0,2,0,0"/>
+                                            <CheckBox Name="chkStockXchng" Content="Stock Xchng" Margin="0,2,0,0"/>
+                                        </StackPanel>
+                                    </GroupBox>
+
+                                </StackPanel>-->
+
+                            </Grid>
+                        </Expander>
+                    </Border>
+                    <Border Name="brdEffects"  CornerRadius="5,5,5,5" Margin="4,5,3,0" BorderBrush="Gray" BorderThickness="1"  >
+                        <Expander Name="extEffects" Width="Auto" IsExpanded="True"  Header="Effects" Margin="1,0,1,0"  >
+                            <StackPanel  >
+                                <GroupBox Name="grpColor" Header="Color" Margin="0,3,0,3"  >
+                                    <StackPanel  >
+                                        <CheckBox Name="chkGrayScale" Content="Gray Scale" Margin="0,5,0,0"/>
+                                        <CheckBox Name="chkSepia" Content="Sepia" Margin="0,2,0,0"/>
+                                        <CheckBox Name="chkInvert" Content="Invert" Margin="0,2,0,0"/>
+
+                                        <DockPanel>
+                                            <Label Content="Saturtion" Width="65"/>
+                                            <TextBlock Name="tblSaturtion" Width="25" IsEnabled="False" />
+                                            <Slider Name="sliSaturtion" Margin="3,0,0,0" Minimum="0" Maximum="100" IsSnapToTickEnabled="True" TickFrequency="1"/>
+                                        </DockPanel>
+
+                                        <DockPanel>
+                                            <Label Content="Contrast" Width="65"/>
+                                            <TextBlock Name="tblContrast" Width="25" IsEnabled="False" />
+                                            <Slider Name="sliContrast" Margin="3,0,0,0" Minimum="0" Maximum="100" IsSnapToTickEnabled="True" TickFrequency="1"/>
+                                        </DockPanel>
+
+                                        <DockPanel>
+                                            <Label Content="Brightness" Width="65"/>
+                                            <TextBlock Name="tblBrightness" Width="25" IsEnabled="False" />
+                                            <Slider Name="sliBrightness" Margin="3,0,0,0" Minimum="0" Maximum="100" IsSnapToTickEnabled="True" TickFrequency="1"/>
+                                        </DockPanel>
+
+                                        <Label Content="Color Overlay" FontWeight="Bold" />
+                                        <RadioButton GroupName="Color_Overlay" Name="redNone" Content="None" Margin="0,2,0,0"/>
+                                        <RadioButton GroupName="Color_Overlay" Name="redRed" Content="Red"  Margin="0,2,0,0"/>
+                                        <RadioButton GroupName="Color_Overlay" Name="redGreen" Content="Green" Margin="0,2,0,0" />
+                                        <RadioButton GroupName="Color_Overlay" Name="redBlue" Content="Blue" Margin="0,2,0,0" />
+                                        <RadioButton GroupName="Color_Overlay" Name="redCyan" Content="Cyan" Margin="0,2,0,0" />
+                                        <RadioButton GroupName="Color_Overlay" Name="redMagenta" Content="Magenta" Margin="0,2,0,0" />
+                                        <RadioButton GroupName="Color_Overlay" Name="redYellow" Content="Yellow" Margin="0,2,0,0"/>
+                                    </StackPanel>
+                                </GroupBox>
+                                
+                                <GroupBox Name="grpMorphology" Header="Morphology" Margin="0,3,0,3"  >
+                                    <StackPanel  >
+                                        <CheckBox Name="chkErosion" Content="Erosion" Margin="0,5,0,0"/>
+                                        <CheckBox Name="chkDilatation" Content="Dilatation" Margin="0,2,0,0"/>
+                                        <CheckBox Name="chkOpening" Content="Opening" Margin="0,2,0,0"/>
+                                        <CheckBox Name="chkClosing" Content="Closing" Margin="0,2,0,0"/>
+                                        <CheckBox Name="chkTopHat" Content="Top Hat" Margin="0,2,0,0"/>
+                                        <CheckBox Name="chkBottomHat" Content="Bottom Hat" Margin="0,2,0,0"/>
+                                    </StackPanel>
+                                </GroupBox>
+
+                                <GroupBox Name="grpConvolutionAndCorrelation" Header="Convolution &amp; Correlation" Margin="0,3,0,3"  >
+                                    <StackPanel  >
+                                        <CheckBox Name="chkMean" Content="Mean" Margin="0,5,0,0"/>
+                                        <CheckBox Name="chkBlur" Content="Blur" Margin="0,2,0,0"/>
+                                        <CheckBox Name="chkSharpen" Content="Sharpen" Margin="0,2,0,0"/>
+                                        <CheckBox Name="chkEdges" Content="Edges" Margin="0,2,0,0"/>
+                                    </StackPanel>
+                                </GroupBox>
+
+                                <GroupBox Name="grpNoiseGeneration" Header="Noise Generation" Margin="0,3,0,3"  >
+                                    <StackPanel  >
+                                        <CheckBox Name="chkAdditive" Content="Additive" Margin="0,5,0,0"/>
+                                        <DockPanel>
+                                            <Label Content="Value" Width="65"/>
+                                            <TextBlock Name="tblAdditive" Width="25" IsEnabled="False" />
+                                            <Slider Name="sliAdditive" Margin="3,0,0,0" Minimum="0" Maximum="100" IsSnapToTickEnabled="True" TickFrequency="1"/>
+                                        </DockPanel>
+
+                                        <CheckBox Name="chkSaltAndPepper" Content="Salt &amp; Pepper" Margin="0,2,0,0"/>
+                                        <DockPanel>
+                                            <Label Content="Value" Width="65"/>
+                                            <TextBlock Name="tblSaltAndPepper" Width="25" IsEnabled="False" />
+                                            <Slider Name="sliSaltAndPepper" Margin="3,0,0,0" Minimum="0" Maximum="100" IsSnapToTickEnabled="True" TickFrequency="1"/>
+                                        </DockPanel>
+                                    </StackPanel>
+                                </GroupBox>
+
+                                <GroupBox Name="grpOther" Header="Other" Margin="0,3,0,3"  >
+                                    <StackPanel  >
+                                        <CheckBox Name="chkOilPainting" Content="Oil Painting" Margin="0,5,0,0"/>
+                                        <DockPanel>
+                                            <Label Content="Brush Size" Width="65"/>
+                                            <TextBlock Name="tblOilPainting" Width="25" IsEnabled="False" />
+                                            <Slider Name="sliOilPainting" Margin="3,0,0,0" Minimum="0" Maximum="100" IsSnapToTickEnabled="True" TickFrequency="1"/>
+                                        </DockPanel>
+
+                                        <CheckBox Name="chkJitter" Content="Jitter" Margin="0,2,0,0"/>
+                                        <DockPanel>
+                                            <Label Content="Radius" Width="65"/>
+                                            <TextBlock Name="tblJitter" Width="25" IsEnabled="False" />
+                                            <Slider Name="sliJitter" Margin="3,0,0,0" Minimum="0" Maximum="100" IsSnapToTickEnabled="True" TickFrequency="1"/>
+                                        </DockPanel>
+
+                                        <CheckBox Name="chkPixellate" Content="Pixellate" Margin="0,2,0,0"/>
+                                        <DockPanel>
+                                            <Label Content="Pixels Size" Width="65"/>
+                                            <TextBlock Name="tblPixellate" Width="25" IsEnabled="False" />
+                                            <Slider Name="sliPixellate" Margin="3,0,0,0" Minimum="0" Maximum="100" IsSnapToTickEnabled="True" TickFrequency="1"/>
+                                        </DockPanel>
+                                    </StackPanel>
+                                </GroupBox>
+
+                                <GroupBox Name="grpRotation" Header="Rotation" Margin="0,3,0,3"  >
+                                    <StackPanel  >
+                                        <CheckBox Name="chkMirrorHorizontal" Content="Mirror Horizontal" Margin="0,5,0,0"/>
+                                        <CheckBox Name="chkMirrorVertical" Content="Mirror Vertical" Margin="0,2,0,0"/>                                        
+                                    </StackPanel>
+                                </GroupBox>
+                                
+                            </StackPanel>
+                        </Expander>
+                    </Border>
+                    <Border Name="brdBordersAndBadges" CornerRadius="5,5,5,5" Margin="4,5,3,5" BorderBrush="Gray" BorderThickness="1"  >
+                        <Expander Name="extBordersAndBadges" Width="Auto" IsExpanded="True"  Header="Borders &amp; Badges" Margin="1,0,1,0"  >
+                            <StackPanel>
+                                <ComboBox Name="cboBadge" Margin="25,10,25,0" Height="35"/>
+                                <ComboBox Name="cboBorder" Margin="25,10,25,0" Height="35"/>
+
+                                <DockPanel Margin="0,10,0,0">
+                                    <Label Content="Thickness" Width="80"/>
+                                    <Slider Name="sliThickness" Margin="3,10,0,0" Minimum="0" Maximum="100" IsSnapToTickEnabled="True" TickFrequency="1"/>
+                                </DockPanel>
+
+                                <DockPanel Margin="0,10,0,10">
+                                    <Label Content="Border Color" Width="80"/>
+                                    <ComboBox Name="cboBorderColor" Margin="3,0,0,0" ItemTemplate="{StaticResource SolidColorTemplate}" SelectedIndex="0">
+                                        <SolidColorBrush Color="AliceBlue" />
+                                        <SolidColorBrush Color="AntiqueWhite" />
+                                        <SolidColorBrush Color="Aqua" />
+                                        <SolidColorBrush Color="Aquamarine" />
+                                        <SolidColorBrush Color="Azure" />
+                                        <SolidColorBrush Color="Beige" />
+                                        <SolidColorBrush Color="Bisque" />
+                                        <SolidColorBrush Color="Black" />
+                                        <SolidColorBrush Color="BlanchedAlmond" />
+                                        <SolidColorBrush Color="Blue" />
+                                        <SolidColorBrush Color="BlueViolet" />
+                                        <SolidColorBrush Color="Brown" />
+                                        <SolidColorBrush Color="BurlyWood" />
+                                        <SolidColorBrush Color="CadetBlue" />
+                                        <SolidColorBrush Color="Chartreuse" />
+                                        <SolidColorBrush Color="Chocolate" />
+                                        <SolidColorBrush Color="Coral" />
+                                        <SolidColorBrush Color="CornflowerBlue" />
+                                        <SolidColorBrush Color="Cornsilk" />
+                                        <SolidColorBrush Color="Crimson" />
+                                        <SolidColorBrush Color="Cyan" />
+                                        <SolidColorBrush Color="DarkBlue" />
+                                        <SolidColorBrush Color="DarkCyan" />
+                                        <SolidColorBrush Color="DarkGoldenrod" />
+                                        <SolidColorBrush Color="DarkGray" />
+                                        <SolidColorBrush Color="DarkGreen" />
+                                        <SolidColorBrush Color="DarkKhaki" />
+                                        <SolidColorBrush Color="DarkMagenta" />
+                                        <SolidColorBrush Color="DarkOliveGreen" />
+                                        <SolidColorBrush Color="DarkOrange" />
+                                        <SolidColorBrush Color="DarkOrchid" />
+                                        <SolidColorBrush Color="DarkRed" />
+                                        <SolidColorBrush Color="DarkSalmon" />
+                                        <SolidColorBrush Color="DarkSeaGreen" />
+                                        <SolidColorBrush Color="DarkSlateBlue" />
+                                        <SolidColorBrush Color="DarkSlateGray" />
+                                        <SolidColorBrush Color="DarkTurquoise" />
+                                        <SolidColorBrush Color="DarkViolet" />
+                                        <SolidColorBrush Color="DeepPink" />
+                                        <SolidColorBrush Color="DeepSkyBlue" />
+                                        <SolidColorBrush Color="DimGray" />
+                                        <SolidColorBrush Color="DodgerBlue" />
+                                        <SolidColorBrush Color="Firebrick" />
+                                        <SolidColorBrush Color="FloralWhite" />
+                                        <SolidColorBrush Color="ForestGreen" />
+                                        <SolidColorBrush Color="Fuchsia" />
+                                        <SolidColorBrush Color="Gainsboro" />
+                                        <SolidColorBrush Color="GhostWhite" />
+                                        <SolidColorBrush Color="Gold" />
+                                        <SolidColorBrush Color="Goldenrod" />
+                                        <SolidColorBrush Color="Gray" />
+                                        <SolidColorBrush Color="Green" />
+                                        <SolidColorBrush Color="GreenYellow" />
+                                        <SolidColorBrush Color="Honeydew" />
+                                        <SolidColorBrush Color="HotPink" />
+                                        <SolidColorBrush Color="IndianRed" />
+                                        <SolidColorBrush Color="Indigo" />
+                                        <SolidColorBrush Color="Ivory" />
+                                        <SolidColorBrush Color="Khaki" />
+                                        <SolidColorBrush Color="Lavender" />
+                                        <SolidColorBrush Color="LavenderBlush" />
+                                        <SolidColorBrush Color="LawnGreen" />
+                                        <SolidColorBrush Color="LemonChiffon" />
+                                        <SolidColorBrush Color="LightBlue" />
+                                        <SolidColorBrush Color="LightCoral" />
+                                        <SolidColorBrush Color="LightCyan" />
+                                        <SolidColorBrush Color="LightGoldenrodYellow" />
+                                        <SolidColorBrush Color="LightGray" />
+                                        <SolidColorBrush Color="LightGreen" />
+                                        <SolidColorBrush Color="LightPink" />
+                                        <SolidColorBrush Color="LightSalmon" />
+                                        <SolidColorBrush Color="LightSeaGreen" />
+                                        <SolidColorBrush Color="LightSkyBlue" />
+                                        <SolidColorBrush Color="LightSlateGray" />
+                                        <SolidColorBrush Color="LightSteelBlue" />
+                                        <SolidColorBrush Color="LightYellow" />
+                                        <SolidColorBrush Color="Lime" />
+                                        <SolidColorBrush Color="LimeGreen" />
+                                        <SolidColorBrush Color="Linen" />
+                                        <SolidColorBrush Color="Magenta" />
+                                        <SolidColorBrush Color="Maroon" />
+                                        <SolidColorBrush Color="MediumAquamarine" />
+                                        <SolidColorBrush Color="MediumBlue" />
+                                        <SolidColorBrush Color="MediumOrchid" />
+                                        <SolidColorBrush Color="MediumPurple" />
+                                        <SolidColorBrush Color="MediumSeaGreen" />
+                                        <SolidColorBrush Color="MediumSlateBlue" />
+                                        <SolidColorBrush Color="MediumSpringGreen" />
+                                        <SolidColorBrush Color="MediumTurquoise" />
+                                        <SolidColorBrush Color="MediumVioletRed" />
+                                        <SolidColorBrush Color="MidnightBlue" />
+                                        <SolidColorBrush Color="MintCream" />
+                                        <SolidColorBrush Color="MistyRose" />
+                                        <SolidColorBrush Color="Moccasin" />
+                                        <SolidColorBrush Color="NavajoWhite" />
+                                        <SolidColorBrush Color="Navy" />
+                                        <SolidColorBrush Color="OldLace" />
+                                        <SolidColorBrush Color="Olive" />
+                                        <SolidColorBrush Color="OliveDrab" />
+                                        <SolidColorBrush Color="Orange" />
+                                        <SolidColorBrush Color="OrangeRed" />
+                                        <SolidColorBrush Color="Orchid" />
+                                        <SolidColorBrush Color="PaleGoldenrod" />
+                                        <SolidColorBrush Color="PaleGreen" />
+                                        <SolidColorBrush Color="PaleTurquoise" />
+                                        <SolidColorBrush Color="PaleVioletRed" />
+                                        <SolidColorBrush Color="PapayaWhip" />
+                                        <SolidColorBrush Color="PeachPuff" />
+                                        <SolidColorBrush Color="Peru" />
+                                        <SolidColorBrush Color="Pink" />
+                                        <SolidColorBrush Color="Plum" />
+                                        <SolidColorBrush Color="PowderBlue" />
+                                        <SolidColorBrush Color="Purple" />
+                                        <SolidColorBrush Color="Red" />
+                                        <SolidColorBrush Color="RosyBrown" />
+                                        <SolidColorBrush Color="RoyalBlue" />
+                                        <SolidColorBrush Color="SaddleBrown" />
+                                        <SolidColorBrush Color="Salmon" />
+                                        <SolidColorBrush Color="SandyBrown" />
+                                        <SolidColorBrush Color="SeaGreen" />
+                                        <SolidColorBrush Color="SeaShell" />
+                                        <SolidColorBrush Color="Sienna" />
+                                        <SolidColorBrush Color="Silver" />
+                                        <SolidColorBrush Color="SkyBlue" />
+                                        <SolidColorBrush Color="SlateBlue" />
+                                        <SolidColorBrush Color="SlateGray" />
+                                        <SolidColorBrush Color="Snow" />
+                                        <SolidColorBrush Color="SpringGreen" />
+                                        <SolidColorBrush Color="SteelBlue" />
+                                        <SolidColorBrush Color="Tan" />
+                                        <SolidColorBrush Color="Teal" />
+                                        <SolidColorBrush Color="Thistle" />
+                                        <SolidColorBrush Color="Tomato" />
+                                        <SolidColorBrush Color="Turquoise" />
+                                        <SolidColorBrush Color="Violet" />
+                                        <SolidColorBrush Color="Wheat" />
+                                        <SolidColorBrush Color="White" />
+                                        <SolidColorBrush Color="WhiteSmoke" />
+                                        <SolidColorBrush Color="Yellow" />
+                                        <SolidColorBrush Color="YellowGreen" />
+                                    </ComboBox>
+                                </DockPanel>
+                            </StackPanel>
+                        </Expander>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</UserControl>

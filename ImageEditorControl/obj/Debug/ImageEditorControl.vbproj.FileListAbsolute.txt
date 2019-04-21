@@ -1,0 +1,28 @@
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControl\bin\Debug\ImageEditorControl.dll
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControl\bin\Debug\ImageEditorControl.pdb
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControl\bin\Debug\ImageEditorControl.xml
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControl\obj\Debug\ResolveAssemblyReference.cache
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControl\obj\Debug\IEControl.baml
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControl\obj\Debug\IEControl.g.vb
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControl\obj\Debug\ImageEditorControl_MarkupCompile.cache
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControl\obj\Debug\ImageEditorControl.g.resources
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControl\obj\Debug\ImageEditorControl.Resources.resources
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControl\obj\Debug\GenerateResource.read.1.tlog
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControl\obj\Debug\GenerateResource.write.1.tlog
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControl\obj\Debug\ImageEditorControl.dll
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControl\obj\Debug\ImageEditorControl.xml
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControl\obj\Debug\ImageEditorControl.pdb
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControl\bin\Debug\ImageEditorControl.dll
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControl\bin\Debug\ImageEditorControl.pdb
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControl\bin\Debug\ImageEditorControl.xml
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControl\obj\Debug\ResolveAssemblyReference.cache
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControl\obj\Debug\IEControl.baml
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControl\obj\Debug\IEControl.g.vb
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControl\obj\Debug\ImageEditorControl_MarkupCompile.cache
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControl\obj\Debug\ImageEditorControl.g.resources
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControl\obj\Debug\ImageEditorControl.Resources.resources
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControl\obj\Debug\GenerateResource.read.1.tlog
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControl\obj\Debug\GenerateResource.write.1.tlog
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControl\obj\Debug\ImageEditorControl.dll
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControl\obj\Debug\ImageEditorControl.xml
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControl\obj\Debug\ImageEditorControl.pdb

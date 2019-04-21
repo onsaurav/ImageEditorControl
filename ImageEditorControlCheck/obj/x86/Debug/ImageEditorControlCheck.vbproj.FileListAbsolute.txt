@@ -1,0 +1,28 @@
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControlCheck\bin\Debug\ImageEditorControlCheck.exe
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControlCheck\bin\Debug\ImageEditorControlCheck.pdb
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControlCheck\bin\Debug\ImageEditorControlCheck.xml
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControlCheck\bin\Debug\ImageEditorControl.dll
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControlCheck\bin\Debug\ImageEditorControl.pdb
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControlCheck\bin\Debug\ImageEditorControl.xml
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControlCheck\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControlCheck\obj\x86\Debug\ImageEditorControlCheck.IEControCheck.resources
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControlCheck\obj\x86\Debug\ImageEditorControlCheck.Resources.resources
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControlCheck\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControlCheck\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControlCheck\obj\x86\Debug\ImageEditorControlCheck.exe
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControlCheck\obj\x86\Debug\ImageEditorControlCheck.xml
+D:\Practice\VB.net\ImageEditorControl\ImageEditorControlCheck\obj\x86\Debug\ImageEditorControlCheck.pdb
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControlCheck\obj\x86\Debug\ImageEditorControlCheck.exe
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControlCheck\obj\x86\Debug\ImageEditorControlCheck.xml
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControlCheck\obj\x86\Debug\ImageEditorControlCheck.pdb
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControlCheck\bin\Debug\ImageEditorControlCheck.exe
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControlCheck\bin\Debug\ImageEditorControlCheck.pdb
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControlCheck\bin\Debug\ImageEditorControlCheck.xml
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControlCheck\bin\Debug\ImageEditorControl.dll
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControlCheck\bin\Debug\ImageEditorControl.pdb
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControlCheck\bin\Debug\ImageEditorControl.xml
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControlCheck\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControlCheck\obj\x86\Debug\ImageEditorControlCheck.IEControCheck.resources
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControlCheck\obj\x86\Debug\ImageEditorControlCheck.Resources.resources
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControlCheck\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\My Soft\VB.net\Image Editor Control\ImageEditorControl\ImageEditorControlCheck\obj\x86\Debug\GenerateResource.write.1.tlog
